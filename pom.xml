@@ -49,6 +49,14 @@
                                         <Main-Class>com.fasterxml.jackson.core</Main-Class>
                                         <Build-Number>2.13.4</Build-Number>
                                     </manifestEntries>
+                                    <manifestEntries>
+                                        <Main-Class>com.fasterxml.jackson.dataformat</Main-Class>
+                                        <Build-Number>2.13.4</Build-Number>
+                                    </manifestEntries>
+                                    <manifestEntries>
+                                        <Main-Class>com.fasterxml.jackson.datatype</Main-Class>
+                                        <Build-Number>2.13.4</Build-Number>
+                                    </manifestEntries>
                                 </transformer>
                             </transformers>
                         </configuration>
@@ -77,6 +85,11 @@
 
     <dependencies>
         <dependency>
+            <groupId>com.fasterxml.jackson.dataformat</groupId>
+            <artifactId>jackson-dataformat-yaml</artifactId>
+            <version>2.13.4</version>
+        </dependency>
+        <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-core</artifactId>
             <version>2.13.4</version>
@@ -85,6 +98,12 @@
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
+            <version>2.13.4</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.datatype</groupId>
+            <artifactId>jackson-datatype-jsr310</artifactId>
             <version>2.13.4</version>
             <scope>compile</scope>
         </dependency>
