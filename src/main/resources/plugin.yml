@@ -1,0 +1,4 @@
+name: CustomSwords
+version: '${project.version}'
+main: org.main.customswords.CustomSwords
+api-version: 1.19
