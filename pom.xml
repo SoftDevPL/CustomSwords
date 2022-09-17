@@ -38,7 +38,19 @@
                             <goal>shade</goal>
                         </goals>
                         <configuration>
+                            <finalName>CustomSwords</finalName>
+                            <outputFile>../../spigot serv 1.19.2/plugins/CustomSwords.jar</outputFile>
+                            <outputDirectory>../../spigot serv 1.19.2/plugins</outputDirectory>
                             <createDependencyReducedPom>false</createDependencyReducedPom>
+
+                            <transformers>
+                                <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                                    <manifestEntries>
+                                        <Main-Class>com.fasterxml.jackson.core</Main-Class>
+                                        <Build-Number>2.13.4</Build-Number>
+                                    </manifestEntries>
+                                </transformer>
+                            </transformers>
                         </configuration>
                     </execution>
                 </executions>
@@ -64,6 +76,18 @@
     </repositories>
 
     <dependencies>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-core</artifactId>
+            <version>2.13.4</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.13.4</version>
+            <scope>compile</scope>
+        </dependency>
         <dependency>
             <groupId>org.spigotmc</groupId>
             <artifactId>spigot-api</artifactId>
